@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="d-flex justify-content-between">
+    <h2 class="mt-5">ADMINISTRACIÓN DE RESERVAS</h2>
+  </div>
+  <a href="" class="boton-volver">Volver</a>
+
+  <div class="row mb-3">
+    <div class="col">
+      <div class="form-group">
+<!--         <input type="text" class="form-control" name="filterPost" placeholder="Buscar..." [(ngModel)]="filterPost">-->
+</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <table class="table table-striped">
+      <thead>
+      <tr>
+        <th *ngFor="let columaActual  of nombresColumnas">{{columaActual}}</th>
+      </tr>
+    </thead>
+      <tbody>
+      <tr *ngFor="let reserva of reservas">
+        <td>{{reserva.nombres}}</td>
+        <td>{{reserva.apellidos}}</td>
+        <td>{{reserva.tipoDocumento}}</td>
+        <td>{{reserva.identificacion}}</td>
+        <td>{{reserva.email}}</td>
+        <td>{{reserva.fechaReserva}}</td>
+        <td>{{reserva.tipoReserva}}</td>
+        <td>{{reserva.cantidadPersonas}}</td>
+        <td>{{reserva.observaciones}}</td>
+        
+        <td>
+          <button type="button" class="btn btn-success" (click)="editarReserva(reserva.identificacion)">Editar</button>
+
+          </td>
+      </tr>
+
+      <app-editar-reserva *ngIf="showModal"></app-editar-reserva>
+      </tbody>
+      </table>
+    </div>
+  </div>
+</div>

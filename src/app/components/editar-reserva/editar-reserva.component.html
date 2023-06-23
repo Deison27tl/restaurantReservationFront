@@ -1,0 +1,97 @@
+<h1 class="display-4">Editar reserva</h1>
+<br><br>
+<div class="container my-custom-container" [formGroup]="reservaForm">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="nombres">Nombres</label>
+        <input class="form-control" formControlName="nombres" type="text" id="nombres" placeholder="Nombres">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="apellidos">Apellidos</label>
+        <input class="form-control" formControlName="apellidos" type="text" id="apellidos" placeholder="Apellidos">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="tipoDocumento">Tipo Documento</label>
+        <select class="form-control" formControlName="tipoDocumento" id="tipoDocumento">
+          <option disabled selected>Selecciona</option>
+          <option value="cc">CC</option>
+          <option value="pasaporte">Pasaporte</option>
+          <option value="visa">Visa</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="identificacion">Identificacion</label>
+        <input class="form-control" formControlName="identificacion" type="text" id="identificacion" placeholder="Identificacion">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="email">Correo</label>
+        <input class="form-control" formControlName="email" type="email" id="email" placeholder="Correo">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="fechaReserva">Fecha de reserva</label>
+        <input class="form-control" formControlName="fechaReserva" type="date" id="fechaReserva" placeholder="AAAA-MM-DD">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="tipoReserva">Tipo reserva</label>
+        <select class="form-control" formControlName="tipoReserva" id="tipoReserva">
+          <option value="cena">Cena</option>
+          <option value="almuerzo">Almuerzo</option>
+          <option value="onces">Onces</option>
+          <option value="cumpleaños">Cumpleaños</option>
+          <option value="ocasion_especial">Ocasion especial</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="cantidadPersonas">Cantidad de personas</label>
+        <input class="form-control" formControlName="cantidadPersonas" type="number" id="cantidadPersonas" placeholder="Cantidad de personas">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="estado">Estado</label>
+        <input class="form-control" formControlName="estado" type="text" id="estado" rows="3">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="observaciones">Observaciones</label>
+        <textarea class="form-control" formControlName="observaciones" id="observaciones" rows="3"></textarea>
+      </div>
+    </div>
+  </div>
+<br>
+</div>
+<div class="row justify-content-center">
+  <div class="col-md-1">
+    <button class="btn btn-primary" (click)="actualizarReserva()">Actualizar</button>
+  </div>
+</div>
